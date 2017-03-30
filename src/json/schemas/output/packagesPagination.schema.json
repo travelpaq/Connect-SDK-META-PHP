@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "title": "Resultados devueltos por el método getPackageList.",
+  "description": "El método devuelve el una página del resultado de búsqueda.",
+  "properties": {
+    "result": {
+      "type": "array",
+      "title": "Paquetes resultantes de la búsqueda.",
+      "description": "Esta propiedad contiene el conjunto de paquetes pertenecientes la pagína actual.",
+      "items": {
+        "$ref": "file://%%PATH%%/json/schemas/output/package.schema.json"
+      }
+    },
+    "current_page": {
+      "type": "integer",
+      "title": "Página actual.",
+      "description": "Página que se esta leyendo de los resultados de búsqueda."
+    },
+    "total_page": {
+      "type": "integer",
+      "title": "Cantidad total de páginas.",
+      "description": "Todas las páginas que devolvió una búsqueda determinada."
+    },
+    "item_per_page": {
+      "type": "integer",
+      "title": "Paquetes por página.",
+      "description": "Cantidad de paquetes que se retornan en una página."
+    },
+    "total_items": {
+      "type": "integer",
+      "title": "Cantidad total de paquetes para esa búsqueda."
+    },
+    "min_price": {
+      "type": "integer",
+      "title": "Cantidad total de paquetes para esa búsqueda."
+    },
+    "max_price": {
+      "type": "integer",
+      "title": "Cantidad total de paquetes para esa búsqueda."
+    },
+    "min_nights": {
+      "type": "integer",
+      "title": "Cantidad total de paquetes para esa búsqueda."
+    },
+    "max_nights": {
+      "type": "integer",
+      "title": "Cantidad total de paquetes para esa búsqueda."
+    },
+    "min_star": {
+      "type": "integer",
+      "title": "Cantidad total de paquetes para esa búsqueda."
+    },
+    "max_star": {
+      "type": "integer",
+      "title": "Cantidad total de paquetes para esa búsqueda."
+    },
+    "min_date_departure": {
+      "type": "string",
+      "title": "Cantidad total de paquetes para esa búsqueda."
+    },
+    "max_date_departure": {
+      "type": "string",
+      "title": "Cantidad total de paquetes para esa búsqueda."
+    }
+  },
+  "required": [
+    "result",
+    "current_page",
+    "total_page",
+    "item_per_page",
+    "total_items",
+    "max_price",
+    "min_price",
+    "min_nights",
+    "max_nights",
+    "min_star",
+    "max_star",
+    "min_date_departure",
+    "max_date_departure"
+  ]
+}
