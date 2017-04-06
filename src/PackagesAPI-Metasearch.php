@@ -27,7 +27,7 @@ use TravelPAQ\PackagesAPI\Exceptions\JsonValidatorException;
  *
  * @package TravelPAQ
  */
-class PackagesAPI
+class PackagesAPI-Metasearch
 {
     /**
      * Constructor.
@@ -84,44 +84,7 @@ class PackagesAPI
         return $ps->getPackageList($params,$page); 
     }
 
-    /**
-     * Obtiene un paquete en dado un identificador
-     *
-     * @param int $package_id Identificador del paquete que se desea obtener
-     * 
-     * @return Package Representa paquete con sus datos 
-     */
-    public function getPackage($package_id)
-    {
-        if(!json_decode(base64_decode($package_id)))
-            throw new ValidationException('El identificador no es correcto');
-        $ps = new PackageService();
-        return $ps->getPackage($package_id);
-    }
-    
-    /**
-     * Verifica disponibilidad de un paquete
-     *
-     * @param int $package_id Identificador del paquete del cual se desea
-     *  verificar la disponibilidad
-     *
-     * @return PackageStatus Retorna el estado del paquete junto con los datos del paquete.
-     * El objeto PackageStatus contienen el estado de disponibilidad
-     * y los datos del paquete en cuestion
-     *
-     * - AVAILABLE: status de un paquete disponible
-     * - NOT_AVAILABLE: status de un paquete no disponible
-     *
-     */
-    
-    public function getPlaces($country_iata = null)  
-    {
-        $travelService = new TravelService();
-        return $travelService->getPlaces($country_iata);
-    }
-
-
-
+   
     /**
      * Obtiene todos los destinos donde hay paquetes disponibles
      *
