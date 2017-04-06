@@ -146,4 +146,11 @@ class PackagesAPI_Metasearch
         $travelService = new TravelService();
         return $travelService->getFaresTree();
     }
+
+    public function getPlaces($country_iata = null)  
+    {
+        $travelService = new TravelService();
+        return $travelService->getPlaces($country_iata);
+    }
+
 }
