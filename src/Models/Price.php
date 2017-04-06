@@ -22,9 +22,6 @@ class Price
     public $currency;
     public $price_per_person;
     public $final_price;
-    public $markup;
-    public $change;
-    public $ota_comission;
     public $TotalPrice;
     public $RoomsPrice;
     /**
@@ -45,18 +42,6 @@ class Price
             $data['final_price'] = "";
         $this->final_price = $data['final_price'];
 
-        if(!array_key_exists('markup', $data))
-            $data['markup'] = 0;
-        $this->markup = $data['markup'];
-
-        if(!array_key_exists('change', $data))
-            $data['change'] = 1;
-        $this->change = $data['change'];
-
-        if(!array_key_exists('ota_comission', $data))
-            $data['ota_comission'] = 0;
-        $this->ota_comission = $data['ota_comission'];
- 
     	$this->TotalPrice = new TotalPrice($data['TotalPrice']);
 
         $this->RoomsPrice = [];
