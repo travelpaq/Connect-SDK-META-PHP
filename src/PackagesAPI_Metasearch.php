@@ -23,11 +23,11 @@ use TravelPAQ\PackagesAPI\Services\TravelService;
 use TravelPAQ\PackagesAPI\Models\Exceptions\ValidationException;
 use TravelPAQ\PackagesAPI\Exceptions\JsonValidatorException;
 /**
- * Class PackagesAPI
+ * Class PackagesAPI_Metasearch
  *
  * @package TravelPAQ
  */
-class PackagesAPI-Metasearch
+class PackagesAPI_Metasearch
 {
     /**
      * Constructor.
