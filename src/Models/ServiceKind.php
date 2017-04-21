@@ -19,16 +19,19 @@ use TravelPAQ\PackagesAPI\Models\Exceptions\ValidationException;
  */
 class ServiceKind
 {
-	public $name;
+	public $detail;
     /**
      * Constructor
      * @param Array data datos del tipo de servicio
      */
     public function __construct($data)
     {
-    	if(!array_key_exists('name', $data))
-    		$data['name'] = "";
-    	$this->name = $data['name'];
+        if(!array_key_exists('detail', $data)){
+            if(!array_key_exists('name', $data))
+                $data['detail'] = "";
+            else $data['detail'] = $data['name'];
+        }
+        $this->detail = $data['detail'];
     }
 
 }
